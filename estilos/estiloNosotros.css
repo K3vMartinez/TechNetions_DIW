@@ -645,7 +645,7 @@ footer svg:hover {
   /* Estructura de la navegación */
   nav ul {
     display: none;/* Se oculta*/
-    width: 45%; /* Ocupa un 45% de la página*/
+    width: 50%; /* Ocupa un 45% de la página*/
     font-size: medium;/* Letra mediana */
     position: absolute; /* Se posiciona a la derecha con un pequeño margen*/
     right: 0rem;
@@ -775,6 +775,7 @@ footer svg:hover {
     width: 90%;
     margin: auto;
   }
+
 
 
   /* Quitamos el bloque de las cookies */
