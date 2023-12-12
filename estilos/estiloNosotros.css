@@ -762,8 +762,7 @@ footer svg:hover {
     display: none;
   }
   /* Equipo de desarrollo y formulario ocupan todo el ancho de la página con un pequeño margen*/
-  #equipoDesarrollo,
-  .formulario {
+  #equipoDesarrollo{
     width: 100%;
     padding: 1rem;
   }
@@ -771,6 +770,10 @@ footer svg:hover {
     text-align: center;
     color: var(--rosa);
     font-size: 1.5rem;
+  }
+  .formulario{
+    width: 90%;
+    margin: auto;
   }
 
 
