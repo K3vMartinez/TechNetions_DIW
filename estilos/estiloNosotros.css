@@ -33,7 +33,7 @@ img {
 }
 /* Maquetación de todo el cuerpo  */
 
-body {
+/*body {
   margin: auto;
   display: grid;
   grid-template-columns: 100%;
@@ -45,7 +45,7 @@ body {
     "main"
     "footer";
 }
-
+*/
 /* Asignación de los grid area*/
 header {
   grid-area: header;
