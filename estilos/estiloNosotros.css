@@ -47,7 +47,7 @@ img {
 }
 */
 /* Asignación de los grid area*/
-header {
+/*header {
   grid-area: header;
 }
 nav {
@@ -61,7 +61,7 @@ main {
 }
 footer {
   grid-area: footer;
-}
+}*/
 
 /*------------------------------*/
 /*-----------HEADER-------------*/
