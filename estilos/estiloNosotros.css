@@ -765,7 +765,7 @@ footer svg:hover {
   #equipoDesarrollo,
   .formulario {
     width: 100%;
-    margin: 1rem;
+    padding: 1rem;
   }
   #equipoDesarrollo p {
     text-align: center;
