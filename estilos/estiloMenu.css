@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav{
+    margin: auto;
+    width: 500px;
+}
+
+ul{
+    list-style: none;
+}
+.menuPrincipal li a{
+    background-color: aqua;
+    color: black;
+    text-decoration: none;
+    padding: 1rem 0.3rem;
+    display: block;
+}
+
+.menuPrincipal li a:hover{
+    background-color: cadetblue;
+}
+
+.menuPrincipal>li {
+    float: left;
+}
+
+.menuPrincipal li ul{
+    display: none;
+    position: absolute;
+    
+}
+.menuPrincipal li:hover > ul{
+    display: flex;
+}

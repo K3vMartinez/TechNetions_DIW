@@ -1,0 +1,806 @@
+/* Importación de las fuentes*/
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100;400;700&display=swap");
+@font-face {
+  font-family: "miFuente";
+  src: url(./fuentes/Inconsolata-VariableFont_wdth\wght.ttf);
+}
+/* Declaración de variables */
+:root {
+  --turquesa_claro: rgba(179, 246, 236, 0.8);
+  --turquesa: rgba(0, 221, 191, 1);
+  --turquesa_oscuro: rgba(44, 68, 78, 1);
+  --rosa: rgba(134, 40, 127, 1);
+  --negro: #000000;
+  --gris: #c2c2c2;
+}
+/*Reseteo de los valores*/
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+/* Para quitar el subrayado de los enlaces */
+a {
+  text-decoration: none;
+}
+/* Para que cuando hayamos visitado un enlace, se quede en negro */
+a:visited {
+  color: var(--negro);
+}
+/* Para que las imágenes ocupen el 100% de su caja*/
+img {
+  width: 100%;
+}
+/* Maquetación de todo el cuerpo  */
+
+body {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
+
+/* Asignación de los grid area*/
+header {
+  grid-area: header;
+}
+nav {
+  grid-area: nav;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+}
+
+/*------------------------------*/
+/*-----------HEADER-------------*/
+/*------------------------------*/
+/* Maquetación de la cabecera*/
+header {
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr 1fr;
+  grid-template-rows: 50% 50%;
+  grid-template-areas:
+    "nombre  logo  producto interaccion"
+    "nombre  logo  producto interaccion";
+  align-items: center; /* Centrado de elementos*/
+  justify-items: center;
+  background-color: var(--turquesa_oscuro);
+  font-family: "miFuente", monospace; /* Fuente importada de manera local */
+}
+
+/* Asignación de los grid area */
+#nombre {
+  grid-area: nombre;
+}
+#logo {
+  grid-area: logo;
+}
+#producto {
+  grid-area: producto;
+}
+#interaccion {
+  grid-area: interaccion;
+}
+
+#nombre a {
+  display: flex;
+  flex-direction: row; /*Para dar el efecto se ha dividido el titulo en dos h1*/
+  font-weight: bold;
+  color: var(--turquesa); /*Relleno de la fuente */
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000; /* Contorno negro*/
+}
+/* Transicion para que desaparezca la letra cuando pasamos el raton por encima*/
+#nombre:hover .minusculas {
+  color: transparent;
+  text-shadow: none;
+  transition: 2s;
+}
+/* Transicion para que la N se desplace a la izquierda
+#nombre:hover #mayuscula {
+  margin-left: -70px;
+  transition: 2s;
+} */
+/* Transicion para que la N vuelva a su sitio*/
+/* #mayuscula {
+  margin-left: 0px;
+  transition: 2s;
+} */
+/* Transición para que vuelvan a aparecer*/
+.minusculas {
+  color: var(--turquesa); /*Relleno de la fuente */
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000; /* Contorno negro*/
+  transition: 2s;
+}
+/*Tamaño de la imagen del producto dentro del contenedor*/
+#producto img {
+  margin-top: 5px; /*margen de 5px para que no aparezca pegado a la parte de arriba de la página*/
+  border-radius: 50%;
+}
+/* AL principio el producto aparece invisible */
+#producto {
+  width: 70%;
+  text-align: center;
+  color: var(--turquesa_claro);
+}
+
+/* Tamaño de la caja del logo */
+#logo {
+  width: 30%;
+}
+/* Disposición de los botones con una separación de 20px */
+#interaccion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-right: 0.5rem;
+}
+/* Borde redondeado del mismo color que el fondo */
+button {
+  font-size: large;
+  border: 1px solid var(--negro);
+  border-radius: 5px;
+}
+/* Efecto para que cuando pases el ratón por encima, se cambie el fondo al verde claro, la letra al verde oscuro,
+  el borde se pone del mismo color para que no haga un efecto de desplazarse el botón. También se especifica que el botón continua
+  con los bordes redondeados. */
+button:hover {
+  color: var(--turquesa_oscuro);
+  background-color: var(--turquesa);
+  border-radius: 5px;
+  border: 1px solid var(--turquesa_oscuro);
+}
+/* Efecto para darle profundidad al boton */
+button:active {
+  box-shadow: 2px 2px 1px var(--negro), -2px 2px 1px var(--negro),
+    2px -2px 1px var(--negro), -2px -2px 1px var(--negro); /* Sombras para hacer el contorno del boton*/
+}
+
+/*------------------------------*/
+/*-----------NAV----------------*/
+/*------------------------------*/
+nav {
+  /* Altura de la navegación ya que la lista de enlaces ocupa poca altura*/
+  font-family: "miFuente", monospace; /* Fuente importada de manera local */
+  font-size: large;
+  position: sticky; /* Posicion sticky para que la cabecera permanezca siempre que  hagamos scroll*/
+  top: 0;
+  background-color: var(--turquesa);
+  z-index: 3; /* Me traigo esta capa para que cuando haga efectos sobre otros elementos, el nav permanezca tal y como está*/
+  height: 3rem; /*Altura para que se respete siempre */
+}
+.menuHamburguesa {
+  display: none;
+}
+nav ul {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: space-evenly; /* Maquetación centrada */
+  align-items: center; /* Centrado de los elementos*/
+  position: relative; /* Para que después podamos mover el menu*/
+  list-style: none;
+  gap: 1rem;
+}
+/* Espaciado  para los enlaces y el menu y subenlaces*/
+nav li a,
+nav label {
+  text-align: center;
+  height: 3rem;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#checkDes {
+  display: block;
+  position: absolute;
+}
+/* Efectos para dar sombra*/
+nav ul > li:hover {
+  background-color: var(--turquesa_oscuro);
+  color: var(--turquesa_claro);
+  transition: 1s;
+}
+nav li a:hover {
+  background-color: var(--turquesa_oscuro);
+  color: var(--turquesa_claro);
+  transition: 1s;
+}
+/* Ocultamos el submenú  y le damos maquetación*/
+nav ul li > ul {
+  display: none;
+  position: absolute;
+  text-align: center;
+  width: 50%;
+}
+
+/* Al pasar el raton por encima se muestra el menú de manera horizontal o al clicar se quedará abierto el submenu*/
+#checkDes:checked ~ ul,
+nav ul li:hover > ul {
+  display: flex;
+  background-color: var(--turquesa);
+}
+
+nav ul li ul li {
+  width: 100%;
+}
+/* Centrado de los enlaces y esquinas de abajo redondeadas*/
+nav ul li ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 100%;
+}
+
+#checkDes {
+  display: block;
+  position: absolute;
+}
+#checkDes {
+  opacity: 0;
+}
+
+#flechaIMenu,
+#flechaAbaMenu {
+  width: 2rem;
+  display: none;
+}
+/*------------------------------*/
+/*-----------MAIN---------------*/
+/*------------------------------*/
+/* Maquetación del main*/
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: "M PLUS 1 Code", monospace;
+  /* Esto se hace para que la cabecera, la navegación y el pie sean más anchos que el main*/
+  max-width: 1000px; /*Anchura máxima para el main */
+  margin: auto; /* Centrado del main*/
+  /* Fuente importada de Internet
+    para todo el main exceptuando que los títulos se 
+    pondran de otra fuente*/
+}
+/* Maquetación de la primera parte de contenido que va dividida en 4 zonas*/
+.contenido1 {
+  gap: 5px; /*Espaciado entre los elementos de 5px */
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "zona1 zona1 zona1 zona2"
+    "zona1 zona1 zona1 zona2"
+    "zona3 zona3 zona4 zona4";
+}
+/* Asignacion de las areas */
+#productos {
+  grid-area: zona1;
+}
+#promocion {
+  grid-area: zona2;
+}
+#tabla {
+  grid-area: zona3;
+}
+#empresas {
+  grid-area: zona4;
+}
+
+.contenido1 h1 {
+  /*Centrado y fuente de los titulos de la zona de contenido 1 */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "mifuente", monospace;
+}
+.contenido1 h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "mifuente", monospace;
+}
+/* Maquetacion de la primera zona*/
+#productos {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px; /* Espaciado entre cada elemento*/
+}
+#productos div {
+  width: 30%;
+  border: 1px solid var(--turquesa_oscuro);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0rem 0.1rem 0.1rem var(--rosa);
+} /* Ancho de cada elemento de la zona 1, es decir cada producto*/
+
+#productos img {
+  border-radius: 50%;
+} /* Imagenes circulares*/
+
+/* Fondo y redondeado de las esquinas inferiores dela franja de promo */
+#tituloPromo {
+  background-color: var(--rosa);
+  color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+/* Centrado de los titulos de la zona 2 (Promocion)*/
+#promocion h2,
+#promocion h3 {
+  text-align: center;
+}
+/* Texto alineado a la izquierda */
+#promocion {
+  text-align: start;
+}
+/* Imagen redonda */
+#promocion img {
+  border-radius: 50%;
+}
+/* Color para el precio que está tachado */
+#promocion del {
+  color: var(--turquesa);
+}
+/* Color para el descuento */
+#promocion span,
+#promocion h3 {
+  color: var(--rosa);
+}
+
+/* Maquetacion de la tabla y su titulo*/
+#tabla {
+  /* Margen para separarlo de la parte de arriba para que no quede tan apelotondao*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+/* Menos del 100% para que no sea tan ancha la tabla y no se apelotone tanto */
+table {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+}
+
+/* Borde para la tabla y la cabecera */
+table,
+th {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+/* Cebreado de la tabla */
+/* Pares */
+tr:nth-child(odd) {
+  background-color: var(--turquesa_claro);
+}
+/* Impares */
+tr:nth-child(even) {
+  background-color: var(--turquesa);
+}
+/* Cabecera rosa*/
+th {
+  color: white;
+  background-color: var(--rosa);
+}
+
+/* Maquetación de la zona 4, las empresas */
+#empresas {
+  /* Margen de arriba para que no quede tan apelotonado*/
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espacio entre cada caja de empresa*/
+}
+/* Efecto para darle profundidad a cada caja de empresa*/
+#empresas div {
+  width: 21%; /* Esste ancho es para que no queden tan apelotonadas*/
+  box-shadow: 2px 2px 1px var(--negro), -2px 2px 1px var(--negro),
+    2px -2px 1px var(--negro), -2px -2px 1px var(--negro);
+}
+#empresas h3 {
+  text-align: center;
+}
+/* Alineacion del texto*/
+#empresas p,
+#empresas h5 {
+  text-align: start;
+}
+/* Tamaño de la fuente de los comentarios mas pequeño*/
+.textoInfo {
+  font-size: small;
+}
+/* Efecto de difuminado para cuando pases por encima del logo de la empresa*/
+.logoEmpresa:hover {
+  opacity: 50%;
+}
+/* El año se pone transparente */
+.year {
+  color: transparent;
+}
+/* Efecto para que cuando se pase el raton por el logo de la empresa
+aparezca el texto con el año */
+.logoEmpresa:hover ~ .year {
+  color: var(--negro);
+}
+
+/* Maquetacion para la segunda parte del contenido*/
+.contenido2 {
+  margin-top: 50px; /* Marge de arriba para que no quede tan apelotonado*/
+  display: flex;
+  flex-direction: column;
+}
+/* Centrado y fuente local para el título */
+.contenido2 h2 {
+  font-family: "miFuente", monospace;
+  text-align: center;
+}
+/* Maquetación para los párrafos en dos columnas con una linea de 
+division*/
+.contenido2 div {
+  margin-top: 30px; /* Otro margen para que no quede tan apelotonado*/
+  column-count: 2;
+  column-fill: balance; /* Relleno balanceado de los párrafos*/
+  column-gap: 50px; /* Espacio entre columnas */
+  column-rule: 7px solid var(--rosa);
+}
+/* Primera letra de cada párrafo más grande*/
+.contenido2 p::first-letter {
+  font-size: xx-large;
+}
+/* Maquetacion de las imagenes*/
+.imgODS {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+}
+.imgODS img {
+  border-radius: 100px;
+  width: 50%;
+}
+
+/*------------------------------*/
+/*-----------FOOTER-------------*/
+/*------------------------------*/
+
+/* Maquetación del pie de página */
+footer {
+  margin-top: 50px; /* Margen en la parte arriba para que no quede apelotonado*/
+  background-color: var(--turquesa_oscuro);
+  /*Redondeado de las esquinas superiores del footer*/
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 20px; /* Padding en la parte de abajo para que no quede tan ajustado el pie*/
+  font-family: "M PLUS 1 Code", monospace;
+  /* Fuente importada de Internet
+    para todo el main exceptuando que los títulos se 
+    pondran de otra fuente*/
+}
+/* Ancho de cada seccion */
+footer section {
+  width: 25%;
+}
+/* Alineacion de todos los títulos del pie con una anchura de 100%*/
+footer h1 {
+  width: 100%;
+  color: var(--turquesa);
+  font-family: "miFuente", monospace;
+}
+/* Maquetación de la primera zona */
+#cookies {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  color: var(--turquesa_claro);
+}
+/* Maquetación de cada imput */
+#cookies div {
+  display: flex;
+  width: 70%;
+  gap: 2px;
+}
+#cookies > div:hover {
+  border-radius: 5px;
+  outline: 2px solid var(--rosa);
+}
+/*Maquetacion de la segunda zona del pie*/
+#avisoLegal {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+#avisoLegal a {
+  color: var(--turquesa_claro);
+}
+/* Viñetas cuadradas */
+#avisoLegal li {
+  list-style: square;
+}
+/* Viñetas de color al pasar el raton por encima*/
+#avisoLegal li:hover {
+  list-style: square;
+  color: var(--rosa);
+}
+/* Maquetación de la zona 3 del pie, las redes sociales*/
+#rrss {
+  width: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+/* Centrado del titulo de las redes sociales*/
+#rrss h1 {
+  text-align: center;
+}
+/* Color para los iconos de las redes sociales*/
+footer svg {
+  color: var(--turquesa_claro);
+}
+/* Efecto que cambia el borde a rosa, el color de cada icono a rosa también y el fondo a turquesa claro*/
+footer svg:hover {
+  border-radius: 5px;
+  outline: 1px solid var(--rosa);
+  color: var(--rosa);
+  background-color: var(--turquesa_claro);
+}
+/* MEDIA QUERY */
+@media screen and (max-width: 620px) {
+  /* Ajuste para que queden bien el nombre de la empresa*/
+  #nombre a {
+    font-size: small;
+  }
+  /* Quitamos los efectos*/
+  /* #nombre:hover #mayuscula{
+    margin-left: 0px;
+    
+  } */
+  #nombre:hover .minusculas {
+    color: var(--turquesa); /*Relleno de la fuente */
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000; /* Contorno negro*/
+  }
+  /* Ocultación del producto */
+  #producto {
+    display: none;
+  }
+  /* Botones en la misma línea*/
+  #interaccion {
+    flex-direction: row;
+  }
+  button {
+    width: 5rem;
+    font-size: small;
+    padding: 0.1rem 0.5rem;
+  }
+
+  /* Estructura de la navegación */
+  nav ul {
+    display: none; /* Se oculta*/
+    width: 45%; /* Ocupa un 45% de la página*/
+    font-size: medium; /* Letra mediana */
+    position: absolute; /* Se posiciona a la derecha con un pequeño margen*/
+    right: 0rem;
+    top: 3rem;
+  }
+
+  nav li {
+    width: 100%;
+  }
+  /* Estructura del submenú desplegable*/
+  nav ul li > ul {
+    display: none; /* Se oculta */
+    position: absolute; /* Posicionamiento y anchura */
+    text-align: center;
+    top: 0;
+  }
+  nav ul > li:hover ul {
+    /* Ahora no aparecerá el submenú si pasamos el raton por encima */
+    display: none;
+  }
+  /* Color de fondo para el submenu*/
+  nav ul > li ul {
+    display: none;
+    background-color: var(--turquesa);
+  }
+  /* MENU HAMBURGUESA*/
+  /* Posicionamiento de los iconos y checkbox*/
+  .menuHamburguesa {
+    display: block;
+  }
+  #checkMenu,
+  #labelMenu {
+    width: 2rem;
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+    cursor: pointer;
+  }
+  #iconoHamburguesa,
+  #flechaDMenu {
+    display: block;
+    position: absolute;
+  }
+  /* De primeras la felcha está oculta*/
+  #flechaDMenu {
+    opacity: 0;
+  }
+  /* El checkbox se oculta */
+  #checkMenu {
+    opacity: 0;
+  }
+  /* Cuando se clicke en el icono de hamburguesa, este mismo se oculta*/
+  #checkMenu:checked ~ #labelMenu > #iconoHamburguesa {
+    opacity: 0;
+  }
+  /* Cuando se clicke en el icono de hamburguesa, aparecerá el icono de las flechas*/
+  #checkMenu:checked ~ #labelMenu > #flechaDMenu {
+    opacity: 1;
+    transition: 1s;
+  }
+  /* Al clicar en el icono de hamburguesa aparecerá desplegado el menú de navegación*/
+  #checkMenu:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--turquesa);
+  }
+  /* Maquetación para las felchas del submenu*/
+  #flechaIMenu,
+  #flechaAbaMenu {
+    display: block;
+    position: absolute;
+    left: 0.5rem;
+  }
+  /* Se posiciona el checkbox del submenu */
+  #checkDes {
+    display: block;
+    position: relative;
+  }
+  /* Las flechas hacia abajo aparecerán de primeras ocultas*/
+  #flechaAbaMenu {
+    opacity: 0;
+  }
+  /* Las flechas hacia la izquierda si aparecerán de primeras*/
+  #flechaIMenu {
+    opacity: 1;
+  }
+  /* Si se clicka en "desarrollo software las flechas hacia la izquierda desaparecen*/
+  #checkDes:checked ~ label > #flechaIMenu {
+    opacity: 0;
+  }
+  /* Si se clicka en "desarrollo software las flechas hacia abajo aparecen*/
+  #checkDes:checked ~ label > #flechaAbaMenu {
+    opacity: 1;
+  }
+
+  /* Si clicamos en "desarrollo software" aparece el submenú al lado*/
+  #checkDes:checked ~ ul {
+    display: block;
+    position: relative;
+    left: 0px;
+    width: 100%;
+    background-color: var(--turquesa_claro);
+  }
+  #checkDes ~ ul > li a {
+    width: 100%;
+  }
+  /* Maquetacion de la primera parte del min*/
+  .contenido1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px; /* Pequeño espaciado para que no se cea tan apelotonado*/
+  }
+  /* Maquetacion de los productos para que queden centrados */
+  #productos div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: x-large;
+  }
+  /* Para quitar los tres útlimos productos */
+  #productos div:nth-last-child(-n + 3) {
+    display: none;
+  }
+  /* Maquetación de la promoción para que quede centrada*/
+  #promocion {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+  }
+  /* El fondo del titulo de la promoción redondeado */
+  #tituloPromo {
+    background-color: var(--rosa);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  /* Quitamos la tabla */
+  #tabla {
+    display: none;
+  }
+  /* Quitamos las empresas */
+  #empresas {
+    display: none;
+  }
+
+  /* Título de los párrafos en minúscula */
+  .contenido2 h2 {
+    text-transform: lowercase;
+  }
+  /* Pasamos los párrafos a una sola columna  y lo colocamos para que no quede tan al filo*/
+  .contenido2 div {
+    column-count: 1;
+    width: 90%;
+    margin: auto;
+  }
+
+  /* Quitamos la capitalización */
+  .contenido2 p::first-letter {
+    font-size: medium;
+  }
+  .imgODS img {
+    width: 100%;
+  }
+  /* Quitamos la primera imagen */
+  .imgODS img:first-child {
+    display: none;
+  }
+  /* Quitamos el bloque de las cookies */
+  #cookies {
+    display: none;
+  }
+  /* Quitamos el bloque de las redes sociales */
+  #rrss {
+    display: none;
+  }
+  /* Maquetación para el bloque de los avisos legales*/
+  #avisoLegal {
+    width: 100%;
+    text-align: center;
+  }
+  #avisoLegal a {
+    color: var(--turquesa_claro);
+  }
+  /* Maquetación de la lista para que se pongan en una misma línea */
+  #avisoLegal ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+  }
+  /* Quitamos iconos de viñetas*/
+  #avisoLegal li {
+    width: 30%;
+    list-style: none;
+  }
+  /* Subrayado de cada elemento de la lista */
+  #avisoLegal li:hover {
+    list-style: none;
+    text-decoration: underline;
+    color: var(--rosa);
+  }
+}

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <link rel="stylesheet" href="./estilos/normalize.css">
+    <link rel="stylesheet" href="./estilos/estiloNosotros.css">
+    <title>TechNetions</title>
+</head>
+
+<body>
+    <header>
+        <div id="nombre">
+            <a href="#equipoDesarrollo">
+                <!-- Dos h2 para hacer una animación en el css -->
+                <h1>T<span class="minusculas">ech</span>N<span class="minusculas">etions</span></h1>
+            </a>
+        </div>
+        <div id="producto">
+            <figure>
+                <img src="./imgIndex/servicios_en_la_nube.png" alt="Promoción">
+                <figcaption>PROMOCIÓN</figcaption>
+            </figure>
+        </div>
+        <div id="logo">
+            <a href="./index.html"><img src="./imgIndex/logo.png" alt="Logo de la empresa"></a>
+        </div>
+        <div id="interaccion">
+            <button>Contacto</button>
+            <button>Iniciar sesión</button>
+        </div>
+    </header>
+    <nav>
+        <input type="checkbox" class="menuHamburguesa" id="checkMenu" accesskey="d">
+        <label for="checkMenu" class="menuHamburguesa" id="labelMenu"><span hidden>Iconos del menú hamburguesa</span>
+            <svg id="iconoHamburguesa" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6H20M4 12H20M4 18H20" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+            <svg id="flechaDMenu" xmlns="http://www.w3.org/2000/svg"  data-name="Layer 1"
+                viewBox="0 0 24 24">
+                <path
+                    d="m18,12c0,.916-.356,1.776-1.004,2.424l-4.131,4.417c-.099.105-.232.159-.365.159-.123,0-.245-.044-.341-.135-.202-.188-.212-.505-.024-.707l4.143-4.429c.47-.471.723-1.081.723-1.729s-.253-1.258-.711-1.717l-4.154-4.441c-.188-.202-.178-.518.024-.707.202-.188.518-.178.707.024l4.143,4.429c.636.636.992,1.497.992,2.412Zm-5.133-.339l-6-6.5c-.187-.202-.503-.215-.707-.028-.203.187-.215.503-.028.707l5.687,6.161-5.687,6.161c-.188.203-.175.52.028.707.096.089.218.133.339.133.135,0,.269-.054.367-.161l6-6.5c.177-.192.177-.487,0-.679Z" />
+            </svg>
+        </label>
+        <ul>
+            <li><input type="checkbox" id="checkDes" accesskey="2">
+                <label for="checkDes">Desarrollo software
+                    <svg id="flechaIMenu" xmlns="http://www.w3.org/2000/svg"  data-name="Layer 1"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="m11.865,18.159c.188.202.178.518-.024.707-.096.09-.219.135-.341.135-.133,0-.267-.053-.365-.159l-4.142-4.429c-.636-.635-.993-1.497-.993-2.412s.357-1.777,1.004-2.424l4.13-4.417c.189-.203.505-.213.707-.024.202.188.212.505.024.707l-4.142,4.429c-.471.471-.723,1.081-.723,1.729s.252,1.258.711,1.717l4.154,4.441Zm.315-6.159l5.687-6.161c.188-.203.175-.52-.028-.707-.202-.188-.52-.174-.707.028l-6,6.5c-.177.192-.177.487,0,.679l6,6.5c.098.106.232.161.367.161.122,0,.243-.044.339-.133.203-.187.215-.503.028-.707l-5.687-6.161Z" />
+                    </svg>
+                    <svg id="flechaAbaMenu" xmlns="http://www.w3.org/2000/svg"  data-name="Layer 1"
+                        viewBox="0 0 24 24" >
+                        <path
+                            d="M12,18c-.916,0-1.777-.357-2.424-1.004l-4.417-4.13c-.202-.188-.212-.505-.024-.707,.189-.203,.505-.213,.707-.024l4.429,4.142c.942,.941,2.528,.93,3.446,.012l4.441-4.154c.202-.19,.519-.178,.707,.024,.188,.202,.178,.518-.023,.707l-4.43,4.142c-.636,.636-1.496,.993-2.412,.993Zm.339-5.133l6.5-6c.203-.187,.216-.503,.028-.707-.187-.202-.503-.215-.706-.028l-6.161,5.687L5.839,6.133c-.203-.188-.521-.174-.707,.028-.188,.203-.175,.52,.028,.707l6.5,6c.096,.088,.218,.133,.339,.133s.243-.044,.339-.133Z" />
+                    </svg>
+                </label>
+
+                <ul>
+                    <li><a href="https://www.ujaen.es/" target="_blank">Desarrollo web</a></li>
+                    <li><a href="https://www.educacionyfp.gob.es/portada.html" target="_blank">Planificación(<abbr
+                                title="Enterprise Resource Planning (Planificación de recursos empresariales)">ERP</abbr>)</a>
+                    </li>
+                    <li><a href="./nosotros.html" target="_blank">Conoce más sobre nosotros</a></li>
+                </ul>
+            </li>
+            <li><a href="https://todofp.es/inicio.html" target="_blank">Consultoría de Formación Profesional</a></li>
+            <li><a href="https://www.incibe.es/" target="_blank">Servicios de seguridad(<abbr
+                        title="Implantación y Administración de Redes">IAR</abbr>)</a></li>
+            <li><a href="https://www.osi.es/es" target="_blank">Acceso a Zona Privada</a></li>
+        </ul>
+    </nav>
+    <div class="migas">
+        <ul>
+            <li>
+                <a href="./index.html">
+                    <svg id="migasCasa" fill="#000000" viewBox="-4.5 0 32 32" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <title>Inicio</title>
+                        <path
+                            d="M19.469 12.594l3.625 3.313c0.438 0.406 0.313 0.719-0.281 0.719h-2.719v8.656c0 0.594-0.5 1.125-1.094 1.125h-4.719v-6.063c0-0.594-0.531-1.125-1.125-1.125h-2.969c-0.594 0-1.125 0.531-1.125 1.125v6.063h-4.719c-0.594 0-1.125-0.531-1.125-1.125v-8.656h-2.688c-0.594 0-0.719-0.313-0.281-0.719l10.594-9.625c0.438-0.406 1.188-0.406 1.656 0l2.406 2.156v-1.719c0-0.594 0.531-1.125 1.125-1.125h2.344c0.594 0 1.094 0.531 1.094 1.125v5.875z">
+                        </path>
+                    </svg>
+                </a>
+            </li>
+            <li><svg id="migasFlecha" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M7.82054 20.7313C8.21107 21.1218 8.84423 21.1218 9.23476 20.7313L15.8792 14.0868C17.0505 12.9155 17.0508 11.0167 15.88 9.84497L9.3097 3.26958C8.91918 2.87905 8.28601 2.87905 7.89549 3.26958C7.50497 3.6601 7.50497 4.29327 7.89549 4.68379L14.4675 11.2558C14.8581 11.6464 14.8581 12.2795 14.4675 12.67L7.82054 19.317C7.43002 19.7076 7.43002 20.3407 7.82054 20.7313Z"
+                        fill="#0F0F0F" />
+                </svg></li>
+            <li><a href="#">Sobre nosotros</a></li>
+        </ul>
+    </div>
+    <main>
+        <section class="productos">
+            <h2>Productos</h2>
+            <article id="producto1">
+                <h2>Software de Gestión de Proyectos y Colaboración</h2>
+                <p>
+
+                    El software de gestión de proyectos mejora la colaboración al facilitar la planificación, ejecución
+                    y seguimiento de tareas en una plataforma centralizada.</p>
+                <h3>Funcionalidades:</h3>
+                <ul>
+                    <li>Asignación de tareas</li>
+                    <li>Seguimiento de progreso</li>
+                    <li>Colaboración en tiempo real</li>
+                </ul>
+                <img src="./imgIndex/software_gestion_proyectos_colaboracion.png"
+                    alt="Imagen de software de gestión de proyectos y colaboración">
+                <p><cite>Luis Medinet</cite>: "Simplifica la asignación de tareas y el seguimiento del proyecto.
+                    Muy
+                    eficiente."</p>
+                <p lang="en"><cite>Michael Hassets</cite>:"Enhances team collaboration. Easy to use and real-time
+                    tracking."</p>
+            </article>
+            <article id="producto2">
+                <h2>Servicios de Virtualización</h2>
+                <p>La virtualización optimiza recursos y reduce costos al consolidar sistemas en una única
+                    infraestructura, mejorando eficiencia y escalabilidad en las empresas.</p>
+                <h3>Funcionalidades:</h3>
+                <ul>
+                    <li>Consolidación de servidores</li>
+                    <li>Escalabilidad dinámica</li>
+                    <li>Aislamiento y seguridad</li>
+                </ul>
+                <img src="./imgIndex/servicios_de_virtualizacion.png" alt="Servicios de vistualización">
+                <p><cite>Amaia Valverde</cite>: "Optimizó nuestro uso de servidores, más eficiente que nunca."</p>
+                <p lang="en"><cite>Alan Rickman</cite>: "The flexibility and security of virtualization are crucial for
+                    our operation."</p>
+            </article>
+        </section>
+        <section id="equipoDesarrollo">
+            <h2>Equipo de desarollo</h2>
+            <div>
+                <img src="./imgIndex/empleado01.png" alt="Minerva Azurmendi">
+                <h3>Minerva Azurmendi</h3>
+                <ul>
+                    <li>Software personalizado</li>
+                    <li>Desarrollo de sitios web</li>
+                    <li>Desarrollo de aplicaciones móviles</li>
+                </ul>
+                <p>Diseñadora</p>
+            </div>
+            <div>
+                <img src="./imgIndex/empleado02.png" alt="Sergio Jiménez">
+                <h3>Sergio Jiménez</h3>
+                <ul>
+                    <li>Desarrollo de sitios web</li>
+                    <li>Desarrollo de aplicaciones móviles</li>
+                    <li>Formación y capacitación</li>
+                </ul>
+                <p>Programador</p>
+            </div>
+            <div>
+                <img src="./imgIndex/empleado03.png" alt="Xiu Garmendia">
+                <h3>Xiu Garmendia</h3>
+                <ul>
+                    <li>Consultoría en tecnología</li>
+                    <li>Servicios en la nube</li>
+                </ul>
+                <p>Analista</p>
+            </div>
+            <div>
+                <img src="./imgIndex/empleado04.png" alt="Alejandro Goikoetxea">
+                <h3>Alejandro Goikoetxea</h3>
+                <ul>
+                    <li>Desarrollo de sitios web</li>
+                    <li>Formación y capacitación</li>
+                </ul>
+                <p>Desarrollador</p>
+            </div>
+        </section>
+        <section class="herramientas">
+            <h2>Herramientas de desarrollo o diseño</h2>
+            <article>
+                <h2>Figma</h2>
+                <p>"La adquisición de Figma Inc. por parte de Adobe Inc. por valor de US$20.000 millones va a ser objeto
+                    de una investigación en profundidad por parte de la Unión Eurpea, por temor a que la operación
+                    perjudique a la competencia mundial en el sector del software utilizado por los diseñadores."</p>
+                <img src="./imgIndex/logo_figma.png" alt="Logotipo de Figma">
+                <p><span>Autor/es:</span> <cite>Samuel Stolton</cite> y <cite>Stephanie Bodoni</cite></p>
+                <p>08 de Agosto, 2023</p>
+                <ul>
+                    <li>#diseño</li>
+                    <li>#desarrollo</li>
+                </ul>
+                <a
+                    href="https://www.bloomberglinea.com/2023/08/08/adquisicion-de-figma-por-adobe-se-ve-afectada-por-investigacion-de-la-ue/">Bloomberg</a>
+            </article>
+            <article>
+                <h2>Github Copilot</h2>
+                <p>"Los desarrolladores han recibido a GitHub Copilot con los brazos abiertos. El asistente de IA que
+                    les ayuda a programar se ha convertido en la gran demostración de lo mucho que esta tecnología puede
+                    ayudar en ciertos ámbitos profesionales, pero ahora se ha desvelado algo que no intuíamos: ese
+                    milagro para los programadores está siendo ruinoso para Microsoft."</p>
+                <img src="./imgIndex/logo_github_copilot.png" alt="Logotipo de GitHub Copilot">
+                <p><span>Autor/es:</span> <cite>Javier Pastor</cite></p>
+                <p>10 de Octubre, 2023</p>
+                <ul>
+                    <li>#IA</li>
+                    <li>#GitHub</li>
+                    <li>#Microsoft</li>
+                </ul>
+                <a
+                    href="https://www.xataka.com/robotica-e-ia/github-copilot-milagro-para-programadores-microsoft-pierde-20-dolares-mes-usuario">Xakata</a>
+            </article>
+        </section>
+        <section class="formulario">
+            <h2>Solicite su servicio</h2>
+            <form action="#">
+                <fieldset>
+                    <legend>Obligatorios</legend>
+                    <label for="nombreEmpresa">Nombre de la empresa: </label><input type="text" id="nombreEmpresa"
+                        placeholder="Nombre de la empresa" required><span class="mensaje"></span>
+                    <br>
+                    <label for="personaContacto">Persona de contacto: </label><input type="text" id="personaContacto"
+                        placeholder="Persona de contacto" required><span class="mensaje"></span>
+                    <br>
+                    <label for="telefonoContacto">Telefono de contacto: </label><input type="tel" id="telefonoContacto"
+                        placeholder="Ej: 612345678" pattern="[679][0-9]{8}" required><span class="mensaje"></span>
+                    <br>
+                    <label for="email">E-mail: </label><input type="email" id="email" placeholder="ejemplo@ejemplo.com"
+                        required><span class="mensaje"></span>
+                    <br>
+                    <h3><label for="productos">Producto:</label></h3>
+                    <select id="productos">
+                        <optgroup label="Desarrollo">
+                            <option value="Software ERP">Software ERP</option>
+                            <option value="Desarrollo Web" selected>Desarrollo Web</option>
+                            <option value="Consultoría">Consultoría</option>
+                        </optgroup>
+                        <optgroup label="Sistemas y seguridad">
+                            <option value="Instalacion y mantenimiento de redes">Instalación y mantenimiento de redes
+                            </option>
+                            <option value="Seguridad informatica">Seguridad informática</option>
+                            <option value="Consultoría">Consultoría</option>
+                        </optgroup>
+                    </select>
+                    <br>
+                    <label for="fecha">Fecha de solicitud: </label><input type="date" id="fecha" required><span
+                        class="mensaje"></span>
+                    <br>
+                    <h3>Turno:</h3>
+                    <input type="radio" value="mañana" id="mañana" name="turno"><label for="mañana">Mañana</label>
+                    <br>
+                    <input type="radio" value="tarde" id="tarde" name="turno" required><label for="tarde">Tarde</label>
+                    <br>
+                </fieldset>
+                <fieldset>
+                    <legend>No obliatorios</legend>
+                    <input type="checkbox" id="terceros"><label for="terceros">Aconsejado por terceros</label>
+                    <br>
+                    <input type="checkbox" id="redes"><label for="redes">Redes sociales</label>
+                    <br>
+                    <input type="checkbox" id="web"><label for="web">Web</label>
+                    <br>
+                    <input type="checkbox" id="otros"><label for="otros">Otros</label>
+                    <br>
+                    <label for="observaciones">Observaciones: </label>
+                    <br>
+                    <textarea name="observaciones" id="observaciones" rows="7" cols="50" placeholder="Indique aquí con más detalle cualquier observación"></textarea>
+                    <br>
+                </fieldset>
+                <div class="botones">
+                    <input type="submit" name="enviar" id="enviar" value="Enviar" title="Enviar el formulario">
+                    <input type="reset" name="Cancelar" id="cancelar" value="Cancelar" title="Cancelar el formulario">
+                </div>
+            </form>
+        </section>
+
+        <div class="tabla">
+            <table>
+                <caption>Productos y servicios</caption>
+                <colgroup>
+                    <col span="1">
+                    <col span="3" class="desarollo">
+                    <col span="3" class="sistemas">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th id="vacio" rowspan="2"></th>
+                        <th id="desarrollo" scope="colgroup" colspan="3">Desarrollo</th>
+                        <th id="sistemas" scope="colgroup" colspan="3">Sistemas y Seguridad</th>
+                    </tr>
+                    <tr>
+                        <th id="D_erp" scope="col">Software ERP</th>
+                        <th id="D_web" scope="col">Desarrollo web</th>
+                        <th id="D_cons" scope="col">Consultoría</th>
+                        <th id="S_redes" scope="col">Instalación y mantenimiento de redes</th>
+                        <th id="S_seg" scope="col">Seguridad informática</th>
+                        <th id="S_cons" scope="col">Consultoría</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th id="Cli_nac" scope="row">Clientes nacionales</th>
+                        <td headers="Cli_nac D_erp">300</td>
+                        <td headers="Cli_nac D_web">450</td>
+                        <td headers="Cli_nac D_cons">700</td>
+                        <td headers="Cli_nac S_redes">250</td>
+                        <td headers="Cli_nac S_seg">600</td>
+                        <td headers="Cli_nac S_cons">650</td>
+                    </tr>
+                    <tr>
+                        <th id="Cli_int" scope="row">Clientes internacionales</th>
+                        <td headers="Cli_int D_erp">350</td>
+                        <td headers="Cli_int D_web">400</td>
+                        <td headers="Cli_int D_cons">500</td>
+                        <td headers="Cli_int S_redes">200</td>
+                        <td headers="Cli_int S_seg">400</td>
+                        <td headers="Cli_int S_cons">100</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th id="totales" scope="row">TOTALES</th>
+                        <td headers="totales D_erp">650</td>
+                        <td headers="totales D_web">850</td>
+                        <td headers="totales D_cons">1200</td>
+                        <td headers="totales S_redes">450</td>
+                        <td headers="totales S_seg">1000</td>
+                        <td headers="totales S_cons">750</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+
+    </main>
+    <footer>
+        <div id="cookies">
+            <h1>Cookies</h1>
+            <div>
+                <input type="checkbox" name="obligatorias" id="obligatorias"><label for="obligatorias">Cookies
+                    obligatorias</label>
+            </div>
+            <div>
+                <input type="checkbox" name="funcionalidad" id="funcionalidad"><label for="funcionalidad">Cookies de
+                    funcionalidad</label>
+            </div>
+            <div>
+                <input type="checkbox" name="publicidad" id="publicidad"><label for="publicidad">Cookies de
+                    publicidad</label>
+            </div>
+        </div>
+        <div id="avisoLegal">
+            <h1>Aviso legal</h1>
+            <ul>
+                <li><a href="#">Soporte</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Acerca de...</a></li>
+            </ul>
+        </div>
+        <div id="rrss">
+            <h1>Síguenos!</h1>
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-x" width="30" height="30"
+                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="30"
+                height="30" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                <path d="M16.5 7.5l0 .01" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="30"
+                height="30" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                <path d="M8 11l0 5" />
+                <path d="M8 8l0 .01" />
+                <path d="M12 16l0 -5" />
+                <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+            </svg>
+        </div>
+    </footer>
+</body>
+
+</html>

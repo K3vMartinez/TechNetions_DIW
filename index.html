@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos/normalize.css">
+    <link rel="stylesheet" href="./estilos/estiloIndex.css">
+    <title>TechNetions</title>
+</head>
+
+<body>
+    <header>
+        <div id="nombre" >
+            <a href="#productos">
+                <!-- Dos h1 para hacer una animación en el css -->
+                <h1>T<span class="minusculas">ech</span>N<span class="minusculas">etions</span></h1>
+            </a>
+        </div>
+        <div id="producto">
+            <figure>
+                <img src="./imgIndex/servicios_en_la_nube.png" alt="Promoción">
+                <figcaption>PROMOCIÓN</figcaption>
+            </figure>
+        </div>
+        <div id="logo" >
+            <a href="#"><img src="./imgIndex/logo.png" alt="Logo de la empresa"></a>
+        </div>
+        <div id="interaccion">
+            <button>Contacto</button>
+            <button>Iniciar sesión</button>
+        </div>
+    </header>
+    <nav>
+        <input type="checkbox" class="menuHamburguesa" id="checkMenu">
+        <label for="checkMenu" class="menuHamburguesa" id="labelMenu"><span hidden>Iconos del menú hamburguesa</span>
+            <svg id="iconoHamburguesa" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6H20M4 12H20M4 18H20" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+            <svg id="flechaDMenu" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24">
+                <path d="m18,12c0,.916-.356,1.776-1.004,2.424l-4.131,4.417c-.099.105-.232.159-.365.159-.123,0-.245-.044-.341-.135-.202-.188-.212-.505-.024-.707l4.143-4.429c.47-.471.723-1.081.723-1.729s-.253-1.258-.711-1.717l-4.154-4.441c-.188-.202-.178-.518.024-.707.202-.188.518-.178.707.024l4.143,4.429c.636.636.992,1.497.992,2.412Zm-5.133-.339l-6-6.5c-.187-.202-.503-.215-.707-.028-.203.187-.215.503-.028.707l5.687,6.161-5.687,6.161c-.188.203-.175.52.028.707.096.089.218.133.339.133.135,0,.269-.054.367-.161l6-6.5c.177-.192.177-.487,0-.679Z"/>
+              </svg>
+
+        </label>
+
+        <ul>
+            <li><input type="checkbox" id="checkDes" accesskey="1">
+                <label for="checkDes">Desarrollo software
+                    <svg id="flechaIMenu" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24">
+                        <path d="m11.865,18.159c.188.202.178.518-.024.707-.096.09-.219.135-.341.135-.133,0-.267-.053-.365-.159l-4.142-4.429c-.636-.635-.993-1.497-.993-2.412s.357-1.777,1.004-2.424l4.13-4.417c.189-.203.505-.213.707-.024.202.188.212.505.024.707l-4.142,4.429c-.471.471-.723,1.081-.723,1.729s.252,1.258.711,1.717l4.154,4.441Zm.315-6.159l5.687-6.161c.188-.203.175-.52-.028-.707-.202-.188-.52-.174-.707.028l-6,6.5c-.177.192-.177.487,0,.679l6,6.5c.098.106.232.161.367.161.122,0,.243-.044.339-.133.203-.187.215-.503.028-.707l-5.687-6.161Z"/>
+                      </svg>
+                      <svg id="flechaAbaMenu" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24"><path d="M12,18c-.916,0-1.777-.357-2.424-1.004l-4.417-4.13c-.202-.188-.212-.505-.024-.707,.189-.203,.505-.213,.707-.024l4.429,4.142c.942,.941,2.528,.93,3.446,.012l4.441-4.154c.202-.19,.519-.178,.707,.024,.188,.202,.178,.518-.023,.707l-4.43,4.142c-.636,.636-1.496,.993-2.412,.993Zm.339-5.133l6.5-6c.203-.187,.216-.503,.028-.707-.187-.202-.503-.215-.706-.028l-6.161,5.687L5.839,6.133c-.203-.188-.521-.174-.707,.028-.188,.203-.175,.52,.028,.707l6.5,6c.096,.088,.218,.133,.339,.133s.243-.044,.339-.133Z"/></svg>    
+                </label>
+                
+                <ul>
+                    <li><a href="https://www.ujaen.es/" target="_blank" tabindex="4">Desarrollo web</a></li>
+                    <li><a href="https://www.educacionyfp.gob.es/portada.html" target="_blank">Planificación(<abbr
+                                title="Enterprise Resource Planning (Planificación de recursos empresariales)">ERP</abbr>)</a>
+                    </li>
+                    <li><a href="./nosotros.html" target="_blank">Conoce más sobre nosotros</a></li>
+                </ul>
+            </li>
+            <li><a href="https://todofp.es/inicio.html" target="_blank">Consultoría de Formación Profesional</a></li>
+            <li><a href="https://www.incibe.es/" target="_blank">Servicios de seguridad(<abbr
+                        title="Implantación y Administración de Redes">IAR</abbr>)</a></li>
+            <li><a href="https://www.osi.es/es" target="_blank">Acceso a Zona Privada</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="contenido1">
+            <div id="productos">
+                <h1>Nuestros Productos</h1>
+                <div>
+                    <figure>
+                        <img src="./imgIndex/software_presonalizado.png" alt="Software personalizado">
+                        <figcaption>Software personalizado</figcaption>
+                    </figure>
+                    <p>⭐4.4/5</p>
+                </div>
+                <div>
+                    <figure>
+                        <img src="./imgIndex/formacion_capacitacion.png" alt="Formación y capacitación">
+                        <figcaption>Formación y capacitación</figcaption>
+                    </figure>
+                    <p>⭐4.6/5</p>
+                </div>
+                <div>
+                    <figure>
+                        <img src="./imgIndex/desarrollo_sitios_web.png" alt="Desarrollo de Sitios Web">
+                        <figcaption>Desarrollo de Sitios Web</figcaption>
+                    </figure>
+                    <p>⭐4.9/5</p>
+                </div>
+                <div>
+                    <figure>
+                        <img src="./imgIndex/desarrollo_app_moviles.png" alt="Desarrollo de aplicaciones móviles">
+                        <figcaption>Desarrollo de aplicaciones móviles</figcaption>
+                    </figure>
+                    <p>⭐4.9/5</p>
+                </div>
+                <div>
+                    <figure>
+                        <img src="./imgIndex/consultoria_tecnologia.png" alt="Consultoría en Tecnología">
+                        <figcaption>Consultoría en Tecnología</figcaption>
+                    </figure>
+                    <p>⭐4.8/5</p>
+                </div>
+
+                <div>
+                    <figure>
+                        <img src="./imgIndex/servicios_en_la_nube.png" alt="Servicios en la nube">
+                        <figcaption>Servicios en la nube</figcaption>
+                    </figure>
+                    <p>⭐4.9/5</p>
+                </div>
+
+            </div>
+            <div id="promocion">
+                <h2 id="tituloPromo">PROMOCIÓN</h2>
+                <h2>Servicios en la nube</h2>
+                <img src="./imgIndex/servicios_en_la_nube.png" alt="Promoción">
+                <h3>35% de descuento</h3>
+                <p><strong>Precio:</strong> <del>160€</del> <span>104€</span></p>
+                <p><strong>Servicios:</strong></p>
+                <ul>
+                    <li>Desarrollo de aplicaciones en la nube.</li>
+                    <li>Migración a plataformas en la nube como AWS, Azure o Google Cloud.</li>
+                </ul>
+            </div>
+            <div id="tabla">
+                <h2>Productos y Servicios</h2>
+                <table>
+                    <caption>Los productos más top!</caption>
+                    <thead>
+                        <tr>
+                            <th>Producto/servicio</th>
+                            <th>Clientes</th>
+                            <th>Nuevos clientes</th>
+                            <th>Valoración</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Software personalizado</td>
+                            <td>320</td>
+                            <td>84</td>
+                            <td>⭐4.4/5</td>
+                        </tr>
+                        <tr>
+                            <td>Desarrollo de Sitios Web</td>
+                            <td>456</td>
+                            <td>97</td>
+                            <td>⭐4.9/5</td>
+                        </tr>
+                        <tr>
+                            <td>Desarollo de aplicaciones móviles</td>
+                            <td>234</td>
+                            <td>77</td>
+                            <td>⭐4.9/5</td>
+                        </tr>
+                        <tr>
+                            <td>Consultoría en Tecnología</td>
+                            <td>265</td>
+                            <td>89</td>
+                            <td>⭐4.8/5</td>
+                        </tr>
+                        <tr>
+                            <td>Servicios en la nube</td>
+                            <td>570</td>
+                            <td>136</td>
+                            <td>⭐4.9/5</td>
+                        </tr>
+                        <tr>
+                            <td>Formación y capacitación</td>
+                            <td>420</td>
+                            <td>49</td>
+                            <td>⭐4.6/5</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>TOTALES:</td>
+                            <td>2265</td>
+                            <td>532</td>
+                            <td>⭐28.5/30</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div id="empresas">
+                <h2>Empresas que cuentan con nosotros: </h2>
+                <div>
+                    <img class="logoEmpresa" src="./imgIndex/logo_twenix.png" alt="Twenix">
+                    <h3>Twenix</h3>
+                    <img src="./imgIndex/servicios_en_la_nube.png" alt="Servicios en la nube">
+                    <h4>Servicios en la nube</h4>
+                    <h5>Comentarios:</h5>
+                    <p class="textoInfo"><cite>"Migración a la nube sin complicaciones, mejora palpable en eficiencia."</cite></p>
+                    <p class="year">Desde: 2007</p>
+                </div>
+                <div>
+                    <img class="logoEmpresa" src="./imgIndex/logo_blucactus.png" alt="Blucactus">
+                    <h3>BLUCACTUS</h3>
+                    <img src="./imgIndex/desarrollo_sitios_web.png" alt="Desarrollo de Sitios Web">
+                    <h4>Desarrollo de Sitios Web</h4>
+                    <h5>Comentarios:</h5>
+                    <p class="textoInfo"><cite>"Rápida entrega y eficiencia en el desarrollo web. Satisfechos con el resultado
+                        final."</cite></p>
+                    <p class="year">Desde: 2010</p>
+                </div>
+                <div>
+                    <img class="logoEmpresa" src="./imgIndex/logo_isvisoft.png" alt="ISVISOFT">
+                    <h3>ISVISOFT</h3>
+                    <img src="./imgIndex/desarrollo_app_moviles.png" alt="Desarrollo móvil">
+                    <h4>Desarrollo de aplicaciones móviles</h4>
+                    <h5>Comentarios:</h5>
+                    <p class="textoInfo"><cite>"La app mejoró nuestra interacción y fortaleció nuestra presencia en el
+                        mercado."</cite> </p>
+                    <p class="year">Desde: 2009</p>
+                </div>
+                <div>
+                    <img class="logoEmpresa" src="./imgIndex/logo_noa.png" alt="Noa">
+                    <h3>Noa estudio</h3>
+                    <img src="./imgIndex/consultoria_tecnologia.png" alt="Consultoría en Tecnología">
+                    <h4>Consultoría en Tecnología</h4>
+                    <h5>Comentarios:</h5>
+                    <p class="textoInfo"><cite>"Asesoramiento estratégico invaluable. Entendieron nuestra visión."</cite></p>
+                    <p class="year">Desde: 2009</p>
+                </div>
+            </div>
+        </div>
+        <div class="contenido2">
+            <h2>Trabajo decente y crecimiento económico</h2>
+            <div>
+                <p>El desarrollo sostenible, en el contexto del trabajo decente y el crecimiento económico,
+                    implica la creación de oportunidades económicas que sean social y ambientalmente responsables.
+                    Un componente fundamental es la promoción de trabajos decentes, que se refiere a empleos que ofrecen
+                    condiciones seguras, salarios justos, y respeto por los derechos laborales. Al asegurar que los
+                    trabajadores tengan acceso a empleo digno, se fomenta la equidad y se contribuye a la construcción
+                    de sociedades más justas.
+                </p>
+                <p>Este enfoque también está vinculado al crecimiento económico sostenible, que busca no solo el aumento
+                    cuantitativo de la producción y el ingreso, sino también la mejora de la calidad de vida y la
+                    reducción
+                    de desigualdades. Al fomentar la innovación y la eficiencia en los procesos económicos, se puede
+                    lograr
+                    un crecimiento que beneficie a todas las capas de la sociedad. Además, el desarrollo sostenible en
+                    este
+                    ámbito implica la consideración de las consecuencias a largo plazo de las actividades económicas,
+                    buscando minimizar impactos negativos en el medio ambiente y promoviendo la resiliencia económica
+                    frente
+                    a los desafíos futuros. En conjunto, el trabajo decente y el crecimiento económico sostenible forman
+                    una
+                    base sólida para el desarrollo equitativo y duradero.
+                </p>
+                <p>El desarrollo sostenible de trabajo decente y crecimiento económico no solo se trata de maximizar las
+                    ganancias, sino también de garantizar la inclusión y la participación de todos los segmentos de la
+                    sociedad. La inversión en la capacitación y educación de la fuerza laboral es esencial para
+                    potenciar la
+                    productividad y permitir que las personas se adapten a los cambios en la economía. Además, se enfoca
+                    en
+                    la promoción
+                    de prácticas empresariales éticas, la igualdad de oportunidades de empleo y el respeto por la
+                    diversidad,
+                    contribuyendo así a comunidades más resilientes y cohesionadas. Un enfoque sostenible en el trabajo
+                    decente y el crecimiento económico no solo impulsa el bienestar presente, sino que también sienta
+                    las
+                    bases para
+                    un futuro próspero y equitativo.
+                </p>
+            </div>
+            <div class="imgODS">
+                <img src="./imgIndex/imgDS01.png" alt="Objetivos del desarrollo sostenible">
+                <img src="./imgIndex/imgDS02.png" alt="Objetivos del desarrollo sostenible">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="cookies">
+            <h1>Cookies</h1>
+            <div>
+                <input type="checkbox" name="obligatorias" id="obligatorias"><label for="obligatorias">Cookies
+                    obligatorias</label>
+            </div>
+            <div>
+                <input type="checkbox" name="funcionalidad" id="funcionalidad"><label for="funcionalidad">Cookies de
+                    funcionalidad</label>
+            </div>
+            <div>
+                <input type="checkbox" name="publicidad" id="publicidad"><label for="publicidad">Cookies de
+                    publicidad</label>
+            </div>
+        </div>
+        <div id="avisoLegal">
+            <h1>Aviso legal</h1>
+            <ul>
+                <li><a href="">Soporte</a></li>
+                <li><a href="">Política de privacidad</a></li>
+                <li><a href="">Acerca de...</a></li>
+            </ul>
+        </div>
+        <div id="rrss">
+            <h1>Síguenos!</h1>
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-x" width="30" height="30"
+                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="30"
+                height="30" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                <path d="M16.5 7.5l0 .01" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="30"
+                height="30" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                <path d="M8 11l0 5" />
+                <path d="M8 8l0 .01" />
+                <path d="M12 16l0 -5" />
+                <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+            </svg>
+        </div>
+    </footer>
+</body>
+
+</html>

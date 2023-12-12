@@ -1,0 +1,158 @@
+/* Importación de las fuentes*/
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100;400;700&display=swap");
+@font-face {
+  font-family: "miFuente";
+  src: url(./fuentes/Inconsolata-VariableFont_wdth\wght.ttf);
+}
+/* Declaración de variables */
+:root {
+  --turquesa_claro: rgba(179, 246, 236,0.8);
+  --turquesa: rgba(0, 221, 191, 1);
+  --turquesa_oscuro:rgba(44, 68, 78, 1);
+  --rosa: rgba(209, 103, 202,1);
+  --negro: #000000;
+  --gris: #c2c2c2;
+}
+:root {
+  --verde_principal: rgba(51, 193, 68, 1);
+  --verde_claro: rgba(127, 225, 139, 1);
+  --verde_oscuro: rgba(6, 138, 22, 1);
+  --negro: #000000;
+  --gris: #c2c2c2;
+}
+/*Reseteo de los valores*/
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Maquetación de todo el cuerpo */
+body {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 10% 50% 20%;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
+/* Asignación de los grid area*/
+header {
+  grid-area: header;
+}
+nav {
+  grid-area: nav;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+}
+
+/* Maquetación de la cabecera */
+header {
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas:
+    "nombre subzona1"
+    "nombre subzona2";
+
+  font-family: "M PLUS 1 Code", monospace;
+  
+}
+/* Asignación de los grid area y colores para la cabecera */
+#nombre {
+  grid-area: nombre;
+  background-color: var(--turquesa_oscuro);
+  color: var(--turquesa)
+}
+#subzona1 {
+  grid-area: subzona1;
+  background-color: var(--turquesa_claro);
+}
+#subzona2 {
+  grid-area: subzona2;
+  background-color: var(--turquesa);
+}
+header section {
+  border: 1px solid black;
+  text-align: center;
+}
+/*Espaciado de 30px entre letras, sombras vertical hacia arriba de gris y sombra vertical 
+hacia abajo de verde oscuro, ambos con un pequeño difuminado.
+Se le pone un padding de 40px por arriba y por abajo*/
+#nombre {
+  letter-spacing: 30px;
+  text-shadow: 0px 3px 1px var(--rosa), 0px -3px 1px var(--turquesa_claro);
+  padding: 40px 0 40px 0;
+}
+/* Formato simple para representar el nav */
+nav{
+    border: 1px solid black;
+    text-align: center;
+}
+/* Formato simple para representar el main */
+main section{
+    text-align: center;
+    height: 250px;
+    border: 1px solid black;
+}
+/* PIE DE PÁGINA */
+
+footer{
+    font-family: 'miFuente', monospace, sans-serif;/*Asignación de la fuente local que hemos descargado*/
+    color: var(--turquesa_claro); /*Color de la fuente en el footer*/
+    background-color: var(--turquesa_oscuro); /* Color del fondo del footer entero*/
+    display:flex;/* Maquetación flex*/
+    justify-content: space-between;/* Colocación de los elementos*/
+    border: 1px solid black; /* Borde para el footer entero*/
+    height: 100px;
+
+}
+/* Ancho de cada sección del footer y borde para cada uno de ellos*/
+footer section{
+    width: 20%;
+    border: 2px solid black;
+}
+/* En la primera sección del footer se incorpora una maquetación flex con
+el contenido alineado a la derecha, verticalmente centrado y con un tamaño
+grande de la fuente. */
+#fz1{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: xx-large;
+}
+/* En la segunda sección del footer se incorpora una maquetación flex con
+Con el contenido alineado a la izquierda, verticalmente centrado y con un tamaño
+muy pequeño de la fuente.  También se le ha puesto una sombra a la sección que
+contienen los apellidos. */
+#fz2{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: xx-small;
+    box-shadow: 10px 0px 2px 0px black;
+
+}
+/* En la tercera sección del footer se incorpora una maquetación flex con
+el contenido alineado a la izquierda, verticalmente centrado y con un tamaño
+mediano de la fuente.  También se le ha puesto un espaciado entre palabras de 
+30px de distancia */
+#fz3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+    word-spacing: 30px;
+}
+/* Asignación de otro color diferente a la localidad */
+#fz3 span{
+    color: var(--rosa)
+}
